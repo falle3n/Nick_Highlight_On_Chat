@@ -1,7 +1,9 @@
 /*
 
 ================================================================================
-						Highlight nickname on chat - v1.0
+						Highlight nickname on chat
+								Or
+						Nick highlight on chat - v1.0
 						By fall3n
 
 This is a simple filterscript which highlights online player's name if it's
@@ -89,7 +91,8 @@ public OnPlayerText(playerid, text[])
 {
     new
 		pos = -1,
-		string[144]
+		string[256] //Don't freak out with 256 cells. If more names are included then more cells are required.
+		//Please increase them if you feel anything wrong when many names are included.
 		#if !defined DEFAULT_HIGHLIGHT_COLOR
 			,cstr[12]
 		#endif
